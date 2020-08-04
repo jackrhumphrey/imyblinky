@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <img src="https://namecheap.simplekb.com//SiteContents/2-7C22D5236A4543EB827F3BD8936E153E/media/set_customDNS2.png"></img>
+      <img src="https://laylahair.com/wp-content/uploads/2018/07/katy-perry-without-makeup-good-morning.jpg"></img>
     </>
   );
 }
