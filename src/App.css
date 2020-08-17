@@ -77,21 +77,26 @@ html {
   letter-spacing: 0;
 }
 
-#root,.container{
+#root,
+.container {
   height: 100vh;
-  height: -moz-available; /* WebKit-based browsers will ignore this. */
-  height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  height: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  height: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
   height: stretch;
 }
 
 .splash {
   height: 100vh;
-  height: -moz-available; /* WebKit-based browsers will ignore this. */
-  height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  height: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  height: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
   height: stretch;
   align-items: center;
   align-content: center;
-  display:flex;
+  display: flex;
   background: -webkit-linear-gradient(60deg, #fcc, #cff, #cfc) fixed;
   background: linear-gradient(60deg, #fcc, #cff, #cfc) fixed;
 }
@@ -102,38 +107,89 @@ html {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16vw;
   font-weight: bold;
-  line-height:normal;
-  -webkit-background-clip: text;
+  line-height: normal;
+  color: #ccc;
+  background: #ccc;
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: #ccc;  
 }
 
 @-webkit-keyframes one {
   0% {
-    background-position: 0% 100%;    }
+    background-position: 0% 100%;
+  }
+
   50% {
-    background-position: 100% 0%;    }
+    background-position: 100% 0%;
+  }
+
   100% {
-    background-position: 0% 100%;  }
+    background-position: 0% 100%;
+  }
 }
 
 @keyframes one {
   0% {
-    background-position: 0% 100%;    }
+    background-position: 0% 100%;
+  }
+
   50% {
-    background-position: 100% 0%;    }
+    background-position: 100% 0%;
+  }
+
   100% {
-    background-position: 0% 100%;  }
+    background-position: 0% 100%;
+  }
+}
+
+.main {
+  margin: 50px;
 }
 
 .content {
-margin: 50px auto;
-max-width: 1200px;
+  margin: auto;
+  max-width: 1200px;
 }
 
 .about {
   background: #f90;
+  color: #fff;
+  padding: 25px;
+  font-size: 1.4em;
+  line-height: 1em;
+}
+
+.links {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  padding: 25px 0px;
+  font-size: 7vw;
+  line-height: 1em;
+}
+
+.link {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: normal;
+}
+
+.link a {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.one,
+.two,
+.three,
+.four {
+}
+
+.contact {
+  background: #f30;
   color: #fff;
   padding: 25px;
   font-size: 1.4em;
