@@ -41,7 +41,7 @@ function App() {
               </span>
               <br></br>
               <span className="link">
-                <a href="https://open.spotify.com/artist/2xUU5XZ4cHaQGl7NAlgMNJ?si=Oy8E_Up3RM-M2WJA87XHEw">
+                <a href="https://www.triplejunearthed.com/artist/imy-blinky">
                   triple j Unearthed
                 </a>
               </span>
