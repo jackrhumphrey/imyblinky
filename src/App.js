@@ -21,7 +21,10 @@ function App() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...obj }),
     })
-      .then(() => alert("Success!"))
+      .then(() => {
+        setObj({ name: "", email: "", message: "" });
+        alert("Success!");
+      })
       .catch((error) => alert(error));
 
     e.preventDefault();
