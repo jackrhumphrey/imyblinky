@@ -1,6 +1,12 @@
 import React from "react";
 import "./App.css";
-import { Form } from "semantic-ui-react";
+import { Form, Button } from "semantic-ui-react";
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 function App() {
   const [obj, setObj] = React.useState({
@@ -8,6 +14,18 @@ function App() {
     email: "",
     message: "",
   });
+
+  const handleSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...obj }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
+    e.preventDefault();
+  };
 
   return (
     <div className="container">
@@ -55,7 +73,7 @@ function App() {
             </p>
           </div>
           <div className="contact">
-            <Form name="contact" method="post">
+            <Form onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="contact" />
               <Form.Input
                 label="Name"
@@ -77,7 +95,7 @@ function App() {
                 value={obj.message}
                 onChange={(e) => setObj({ ...obj, message: e.target.value })}
               />
-              <Form.Button type="submit">Submit</Form.Button>
+              <Button type="submit">Submit</Button>
             </Form>
           </div>
         </div>
