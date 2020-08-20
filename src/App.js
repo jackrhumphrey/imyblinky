@@ -48,19 +48,27 @@ function App() {
             </p>
           </div>
           <div className="contact">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              sed libero in odio posuere vulputate. Praesent interdum ipsum mi,
-              ac consectetur urna rutrum a. Donec sit amet tincidunt nisi.
-              Mauris consequat sit amet diam sit amet vulputate. Quisque orci
-              leo, ullamcorper convallis urna placerat, rutrum suscipit eros.
-              Integer et placerat massa, a vestibulum quam. Phasellus malesuada
-              maximus justo, pretium volutpat ligula pretium ut. Sed vel nisl
-              tincidunt, convallis arcu quis, malesuada ante. Aenean sit amet
-              feugiat mi. Aliquam in quam vel justo venenatis efficitur. Sed
-              mattis efficitur diam, et iaculis arcu condimentum et. Suspendisse
-              quis ultricies sem. Quisque vestibulum condimentum vulputate.
-            </p>
+            <form name="contact" method="post">
+              <input type="hidden" name="form-name" value="contact" />
+              <p>
+                <label>
+                  Name: <input type="text" name="name" />
+                </label>
+              </p>
+              <p>
+                <label>
+                  Email: <input type="email" name="email" />
+                </label>
+              </p>
+              <p>
+                <label>
+                  Message: <textarea name="message"></textarea>
+                </label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
+            </form>
           </div>
         </div>
       </div>
