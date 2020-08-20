@@ -1,7 +1,14 @@
 import React from "react";
 import "./App.css";
+import { Form } from "semantic-ui-react";
 
 function App() {
+  const [obj, setObj] = React.useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   return (
     <div className="container">
       <div className="splash">
@@ -48,27 +55,30 @@ function App() {
             </p>
           </div>
           <div className="contact">
-            <form name="contact" method="post">
+            <Form name="contact" method="post">
               <input type="hidden" name="form-name" value="contact" />
-              <p>
-                <label>
-                  Name: <input type="text" name="name" />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Email: <input type="email" name="email" />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Message: <textarea name="message"></textarea>
-                </label>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
-            </form>
+              <Form.Input
+                label="Name"
+                type="text"
+                name="name"
+                value={obj.name}
+                onChange={(e) => setObj({ ...obj, name: e.target.value })}
+              />
+              <Form.Input
+                label="Email"
+                type="email"
+                name="email"
+                value={obj.email}
+                onChange={(e) => setObj({ ...obj, email: e.target.value })}
+              />
+              <Form.TextArea
+                label="Message"
+                name="message"
+                value={obj.message}
+                onChange={(e) => setObj({ ...obj, message: e.target.value })}
+              />
+              <Form.Button type="submit">Submit</Form.Button>
+            </Form>
           </div>
         </div>
       </div>

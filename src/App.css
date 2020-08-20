@@ -189,3 +189,7 @@ html {
   font-size: 1.4em;
   line-height: 1em;
 }
+
+.ui.form .field > label {
+  color: #fff;
+}
