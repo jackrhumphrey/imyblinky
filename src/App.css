@@ -164,32 +164,54 @@ html {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   color: #fff;
-  padding: 25px 0px;
-  font-size: 7vw;
+  font-size: 1.4em;
   line-height: 1em;
+  margin:25px auto;
+  text-align:center;
 }
 
+.links p {
+  margin: auto;
+}
 .link {
   font-family: Helvetica, Arial, sans-serif;
   line-height: normal;
 }
 
 .link a {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
-  color: #ccc;
+}
+
+.link a:hover {
+  text-decoration: underline;
 }
 
 .contact {
-  background: #f30;
-  color: #fff;
+  background: #f2f2f2;
+  /* color: #fff; */
   padding: 25px;
   font-size: 1.4em;
   line-height: 1em;
+  width: 100%;
 }
 
 .ui.form .field > label {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.87);
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+@media screen and (max-width: 1023px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .nav {
+    position: inline;
+  }
+}
+
