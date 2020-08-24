@@ -70,6 +70,7 @@ function App() {
             frameborder="0"
             allowtransparency="true"
             allow="encrypted-media"
+            style={{margin:"auto"}}
           ></iframe>
           <div className="contact">
             <div
