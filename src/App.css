@@ -179,6 +179,7 @@ html {
   margin: auto;
   text-align:center;
   margin-bottom:25px;
+  word-spacing: 1em;
 }
 
 .links p {
@@ -187,6 +188,7 @@ html {
 .link {
   font-family: Helvetica, Arial, sans-serif;
   line-height: normal;
+  word-spacing: normal;
 }
 
 .link a {
