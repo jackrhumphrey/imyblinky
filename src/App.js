@@ -45,6 +45,9 @@ function App() {
                 </a>
               </span>{" "}
               <span className="link">
+                <a href="https://www.facebook.com/ImyBlinky">Facebook</a>
+              </span>{" "}
+              <span className="link">
                 <a href="https://imyblinky.bandcamp.com">Bandcamp</a>
               </span>{" "}
               <span className="link">
@@ -63,50 +66,50 @@ function App() {
             </p>
           </div> */}
           <div className="wrapper">
-          <iframe
-            src="https://open.spotify.com/embed/artist/2xUU5XZ4cHaQGl7NAlgMNJ"
-            width="300"
-            height="380"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-            style={{margin:"auto"}}
-          ></iframe>
-          <div className="contact">
-            <div
-              style={{
-                marginBottom: "14px",
-                fontWeight: "bold",
-                color: "rgba(0, 0, 0, 0.87)",
-              }}
-            >
-              Contact
+            <iframe
+              src="https://open.spotify.com/embed/artist/2xUU5XZ4cHaQGl7NAlgMNJ"
+              width="300"
+              height="380"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+              style={{ margin: "auto" }}
+            ></iframe>
+            <div className="contact">
+              <div
+                style={{
+                  marginBottom: "14px",
+                  fontWeight: "bold",
+                  color: "rgba(0, 0, 0, 0.87)",
+                }}
+              >
+                Contact
+              </div>
+              <Form onSubmit={handleSubmit}>
+                <input type="hidden" name="form-name" value="contact" />
+                <Form.Input
+                  label="Name"
+                  type="text"
+                  name="name"
+                  value={obj.name}
+                  onChange={(e) => setObj({ ...obj, name: e.target.value })}
+                />
+                <Form.Input
+                  label="Email"
+                  type="email"
+                  name="email"
+                  value={obj.email}
+                  onChange={(e) => setObj({ ...obj, email: e.target.value })}
+                />
+                <Form.TextArea
+                  label="Message"
+                  name="message"
+                  value={obj.message}
+                  onChange={(e) => setObj({ ...obj, message: e.target.value })}
+                />
+                <Button type="submit">Submit</Button>
+              </Form>
             </div>
-            <Form onSubmit={handleSubmit}>
-              <input type="hidden" name="form-name" value="contact" />
-              <Form.Input
-                label="Name"
-                type="text"
-                name="name"
-                value={obj.name}
-                onChange={(e) => setObj({ ...obj, name: e.target.value })}
-              />
-              <Form.Input
-                label="Email"
-                type="email"
-                name="email"
-                value={obj.email}
-                onChange={(e) => setObj({ ...obj, email: e.target.value })}
-              />
-              <Form.TextArea
-                label="Message"
-                name="message"
-                value={obj.message}
-                onChange={(e) => setObj({ ...obj, message: e.target.value })}
-              />
-              <Button type="submit">Submit</Button>
-            </Form>
-          </div>
           </div>
         </div>
       </div>
