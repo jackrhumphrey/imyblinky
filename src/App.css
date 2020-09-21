@@ -197,7 +197,7 @@ html {
 }
 
 .link a:hover {
-  text-decoration: underline;
+  color: #99f;
 }
 
 .contact {
