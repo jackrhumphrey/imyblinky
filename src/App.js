@@ -39,32 +39,19 @@ function App() {
         <div className="content">
           <div className="links">
             <p>
-              <span className="link">
-                <a href="https://open.spotify.com/artist/2xUU5XZ4cHaQGl7NAlgMNJ?si=Oy8E_Up3RM-M2WJA87XHEw">
-                  Spotify
+              <a href="https://open.spotify.com/artist/2xUU5XZ4cHaQGl7NAlgMNJ?si=Oy8E_Up3RM-M2WJA87XHEw">
+                Spotify
                 </a>
-              </span>{" "}
-              <span className="link">
-                <a href="https://www.facebook.com/ImyBlinky">Facebook</a>
-              </span>{" "}
-              <span className="link">
-                <a href="https://imyblinky.bandcamp.com">Bandcamp</a>
-              </span>{" "}
-              <span className="link">
-                <a href="https://soundcloud.com/imy-blinky">SoundCloud</a>
-              </span>{" "}
-              <span className="link">
-                <a href="https://www.triplejunearthed.com/artist/imy-blinky">
-                  triple j Unearthed
-                </a>
-              </span>
+              {" "}
+              <a href="https://www.facebook.com/ImyBlinky">Facebook</a>
+              {" "}
+              <a href="https://imyblinky.bandcamp.com">Bandcamp</a>
+              {" "}
+              <a href="https://soundcloud.com/imy-blinky">SoundCloud</a>
+              {" "}
+              <a href="https://www.triplejunearthed.com/artist/imy-blinky">triple j Unearthed</a>
             </p>
           </div>
-
-          {/* <div className="about">
-            <p>
-            </p>
-          </div> */}
           <div className="wrapper">
             <iframe
               src="https://open.spotify.com/embed/artist/2xUU5XZ4cHaQGl7NAlgMNJ"
@@ -73,7 +60,7 @@ function App() {
               frameborder="0"
               allowtransparency="true"
               allow="encrypted-media"
-              style={{ margin: "auto" }}
+              style={{ margin: "0 auto" }}
             ></iframe>
             <div className="contact">
               <div

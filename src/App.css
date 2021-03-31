@@ -1,4 +1,22 @@
-@font-face {
+@property --color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #fcc;
+}
+
+@property --color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #cff;
+}
+
+@property --color-3 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #cfc;
+}
+
+/* @font-face {
   font-family: "Adobe Caslon Pro";
   src: url("../src/CaslonPro/ACaslonPro-Semibold.eot");
   src: local("Adobe Caslon Pro Semibold"), local("ACaslonPro-Semibold"),
@@ -69,36 +87,51 @@
     url("../src/CaslonPro/ACaslonPro-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
-}
-
-html {
-  font-family: Adobe Caslon Pro, Times, Times New Roman, serif;
-  font-weight: 400;
-  letter-spacing: 0;
-}
+} */
 
 #root,
 .container {
   height: 100vh;
   height: -moz-available;
-  /* WebKit-based browsers will ignore this. */
   height: -webkit-fill-available;
-  /* Mozilla-based browsers will ignore this. */
   height: stretch;
+}
+
+.container {
+  background: -webkit-linear-gradient(60deg, #fcc, #cff, #cfc) fixed;
+  background: -webkit-linear-gradient(60deg, #fcc, #cff, #cfc) fixed;
 }
 
 .splash {
   height: 100vh;
   height: -moz-available;
-  /* WebKit-based browsers will ignore this. */
   height: -webkit-fill-available;
-  /* Mozilla-based browsers will ignore this. */
   height: stretch;
   align-items: center;
   align-content: center;
   display: flex;
-  background: -webkit-linear-gradient(60deg, #fcc, #cff, #cfc) fixed;
-  background: linear-gradient(60deg, #fcc, #cff, #cfc) fixed;
+  -webkit-animation: one 6s infinite linear;
+  animation: one 6s infinite linear;
+  background: -webkit-linear-gradient(
+      60deg,
+      var(--color-1),
+      var(--color-2),
+      var(--color-3)
+    )
+    fixed;
+  background: linear-gradient(
+      60deg,
+      var(--color-1),
+      var(--color-2),
+      var(--color-3)
+    )
+    fixed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash {
+    animation: none;
+  }
 }
 
 .imy {
@@ -108,48 +141,60 @@ html {
   font-size: 16vw;
   font-weight: bold;
   line-height: normal;
-  color: #ccc;
-  background: #ccc;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #e0e0e0;
 }
 
 @-webkit-keyframes one {
   0% {
-    background-position: 0% 100%;
+    --color-1: #fcc;
+    --color-2: #cff;
+    --color-3: #cfc;
   }
-
-  50% {
-    background-position: 100% 0%;
+  33% {
+    --color-1: #ccf;
+    --color-2: #ffc;
+    --color-3: #fcc;
   }
-
+  67% {
+    --color-1: #cfc;
+    --color-2: #fcf;
+    --color-3: #ccf;
+  }
   100% {
-    background-position: 0% 100%;
+    --color-1: #fcc;
+    --color-2: #cff;
+    --color-3: #cfc;
   }
 }
 
 @keyframes one {
   0% {
-    background-position: 0% 100%;
+    --color-1: #fcc;
+    --color-2: #cff;
+    --color-3: #cfc;
   }
-
-  50% {
-    background-position: 100% 0%;
+  33% {
+    --color-1: #ccf;
+    --color-2: #ffc;
+    --color-3: #fcc;
   }
-
+  67% {
+    --color-1: #cfc;
+    --color-2: #fcf;
+    --color-3: #ccf;
+  }
   100% {
-    background-position: 0% 100%;
+    --color-1: #fcc;
+    --color-2: #cff;
+    --color-3: #cfc;
   }
 }
 
 .main {
-  margin: 50px;
+  margin: auto 50px;
   height: 100vh;
   height: -moz-available;
-  /* WebKit-based browsers will ignore this. */
   height: -webkit-fill-available;
-  /* Mozilla-based browsers will ignore this. */
   height: stretch;
   align-items: center;
   align-content: center;
@@ -157,17 +202,9 @@ html {
 }
 
 .content {
-  margin: auto;
+  margin: 50px auto;
   width: 100%;
   max-width: 1200px;
-}
-
-.about {
-  background: #f90;
-  color: #fff;
-  padding: 25px;
-  font-size: 1.4em;
-  line-height: 1em;
 }
 
 .links {
@@ -177,39 +214,35 @@ html {
   font-size: 1.4em;
   line-height: 1em;
   margin: auto;
-  text-align:center;
-  margin-bottom:25px;
+  text-align: center;
+  margin-bottom: 25px;
   word-spacing: 1em;
 }
 
 .links p {
   margin: auto;
 }
-.link {
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: normal;
+
+.links a {
   word-spacing: normal;
-}
-
-.link a {
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
+  white-space: nowrap;
 }
 
-.link a:hover {
+.links a:hover {
   color: #99f;
 }
 
 .contact {
   background: #f2f2f2;
-  /* color: #fff; */
   padding: 25px;
   font-size: 1.4em;
   line-height: 1em;
   width: 100%;
 }
 
-.ui.form .field > label, .link a {
+.ui.form .field > label,
+.links a {
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -227,4 +260,3 @@ html {
     height: auto;
   }
 }
-
