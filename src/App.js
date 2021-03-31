@@ -23,7 +23,7 @@ function App() {
     })
       .then(() => {
         setObj({ name: "", email: "", message: "" });
-        alert("Success!");
+        alert("Thank you for your message!");
       })
       .catch((error) => alert(error));
 
