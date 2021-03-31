@@ -92,7 +92,6 @@
 #root,
 .container {
   height: 100vh;
-  height: -moz-available;
   height: -webkit-fill-available;
   height: stretch;
 }
@@ -104,7 +103,6 @@
 
 .splash {
   height: 100vh;
-  height: -moz-available;
   height: -webkit-fill-available;
   height: stretch;
   align-items: center;
@@ -193,7 +191,6 @@
 .main {
   margin: auto 50px;
   height: 100vh;
-  height: -moz-available;
   height: -webkit-fill-available;
   height: stretch;
   align-items: center;
