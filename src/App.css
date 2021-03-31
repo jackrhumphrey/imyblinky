@@ -89,6 +89,28 @@
   font-style: italic;
 } */
 
+@font-face {
+  font-family: "Helvetica";
+  src: url("../src/Helvetica/helvetica-webfont.eot");
+  src: url("../src/Helvetica/helvetica-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../src/Helvetica/helvetica-webfont.woff") format("woff"),
+    url("../src/Helvetica/helvetica-webfont.ttf") format("truetype"),
+    url("../src/Helvetica/helvetica-webfont.svg#helveticaregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("../src/Helvetica/helveticabold-webfont.eot");
+  src: url("../src/Helvetica/helveticabold-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../src/Helvetica/helveticabold-webfont.woff") format("woff"),
+    url("../src/Helvetica/helveticabold-webfont.ttf") format("truetype"),
+    url("../src/Helvetica/helveticabold-webfont.svg#helveticabold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 #root,
 .container {
   height: 100vh;
@@ -135,9 +157,8 @@
 .imy {
   cursor: default;
   margin: 0 auto;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Bold", Arial, sans-serif;
   font-size: 16vw;
-  font-weight: bold;
   line-height: normal;
   color: #ccc;
 }
