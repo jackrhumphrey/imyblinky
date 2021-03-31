@@ -157,7 +157,7 @@
 .imy {
   cursor: default;
   margin: 0 auto;
-  font-family: "Helvetica Bold", Arial, sans-serif;
+  font-family: "Helvetica Bold", sans-serif;
   font-size: 16vw;
   line-height: normal;
   color: #ccc;
@@ -226,7 +226,7 @@
 }
 
 .links {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Bold", Arial, sans-serif;
   font-weight: bold;
   color: #fff;
   font-size: 1.4em;
@@ -243,7 +243,6 @@
 
 .links a {
   word-spacing: normal;
-  font-weight: bold;
   white-space: nowrap;
 }
 
