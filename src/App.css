@@ -108,8 +108,7 @@
       format("embedded-opentype"),
     url("../src/Helvetica/helveticabold-webfont.woff") format("woff"),
     url("../src/Helvetica/helveticabold-webfont.ttf") format("truetype"),
-    url("../src/Helvetica/helveticabold-webfont.svg")
-      format("svg");
+    url("../src/Helvetica/helveticabold-webfont.svg") format("svg");
   font-weight: bold;
   font-style: normal;
 }
@@ -260,6 +259,7 @@
   font-size: 1.4em;
   line-height: 1em;
   width: 100%;
+  margin-left: 25px;
 }
 
 .ui.form .field > label,
@@ -270,12 +270,15 @@
 .wrapper {
   display: flex;
   flex-direction: row;
-  gap: 25px;
 }
 
 @media screen and (max-width: 1023px) {
   .wrapper {
     flex-direction: column;
+  }
+  .contact {
+    margin-left: 0px;
+    margin-top: 25px;
   }
   .main {
     height: auto;
