@@ -126,6 +126,7 @@
 }
 
 .splash {
+  min-height: 100vh;
   height: 100vh;
   height: -webkit-fill-available;
   height: stretch;
@@ -213,6 +214,7 @@
 }
 
 .main {
+  min-height: 100vh;
   margin: auto 50px;
   height: 100vh;
   height: -webkit-fill-available;
