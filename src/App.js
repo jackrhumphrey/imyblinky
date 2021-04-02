@@ -31,9 +31,11 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <div className="splash">
-        <div className="imy">Imy Blinky</div>
+    <>
+      <div className="container">
+        <div className="splash">
+          <div className="imy">Imy Blinky</div>
+        </div>
       </div>
       <div className="main">
         <div className="content">
@@ -100,7 +102,7 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

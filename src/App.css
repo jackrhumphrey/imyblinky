@@ -113,14 +113,11 @@
   font-style: normal;
 }
 
-#root,
 .container {
+  min-height: 100vh;
   height: 100vh;
   height: -webkit-fill-available;
   height: stretch;
-}
-
-.container {
   background: -webkit-linear-gradient(60deg, #fcc, #cff, #cfc) fixed;
   background: -webkit-linear-gradient(60deg, #fcc, #cff, #cfc) fixed;
 }
