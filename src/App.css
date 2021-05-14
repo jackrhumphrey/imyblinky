@@ -22,7 +22,7 @@
   height: -webkit-fill-available;
   height: stretch;
   background: -webkit-linear-gradient(60deg, #fcc, #cff, #cfc) fixed;
-  background: -webkit-linear-gradient(60deg, #fcc, #cff, #cfc) fixed;
+  background: linear-gradient(60deg, #fcc, #cff, #cfc) fixed;
 }
 
 .splash {
